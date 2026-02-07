@@ -1,0 +1,38 @@
+.holder {
+    display: flex;
+    justify-content: center;
+    height: 440px;
+    margin: 30px auto;
+    background-color:rgb(233, 240, 240);
+    padding: 4px;
+    transition: 0.9s;
+    border: 1px solid rgb(233, 240, 240);
+}
+.holder:hover {
+    box-shadow: 4.4px 10px 18.9px hsla(0, 0%, 61%, 0.46);
+
+}
+.mainSlid1 {
+    width: 50%;
+}
+.mainSlid2 {
+    width: 50%;
+}
+.slideHolder {
+    height: 100%;
+}
+.slideHolder :nth-child(1) {
+    height: 100%;
+}
+.slideHolder :nth-child(2) {
+    height: 100%;
+}
+.slideHolder :nth-child(3) {
+    height: 100%;
+}
+.slideHolder :nth-child(4) {
+    height: 100%;
+}
+.slideHolder :nth-child(5) {
+    height: 100%;
+}

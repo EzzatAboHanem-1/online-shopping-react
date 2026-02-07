@@ -1,0 +1,41 @@
+.h {
+    
+    height: 81vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btnCart {
+    background-color: #198754;
+    color: white;
+    text-align: center;
+    width: 96%;
+    cursor: pointer;
+    transition: .6s;
+    font-size: 16px;
+    font-weight:700;
+    margin: 20px auto 0;
+    height: 40px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.productHover:hover .btnCart {
+    width: 96%;
+    opacity: 1;
+    transform: translateY(0%);
+}
+.btnCart:hover {
+    background-color: #0e5b37;
+    border: 2px black;
+}
+
+.discribtionHeight {
+    height: 35px;
+    margin-bottom:20px;
+    max-height: 50px;
+    
+}
+

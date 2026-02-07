@@ -1,0 +1,96 @@
+.navcontainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color:rgb(233, 240, 240);
+    max-width: 68%;
+    margin: 40px auto 30px;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.navlogo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    margin: 0 0 0 20px;
+}
+
+.logocontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.linkscontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0 10px;
+    background-color: rgb(246, 248, 248);
+    padding: 9px;
+    border: 1px solid rgb(203, 204, 204);
+    border-radius: 3px;
+    width: 680px;
+    max-width: 680px;
+}
+.linkitems {
+    font-size: 18px;
+    padding: 10px 13px;
+    margin: 0 20px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-weight: 600;
+}
+.linkitems:hover a {
+    color: black;
+}
+.slinkscontainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+    list-style: none;
+    
+}
+
+.icons {
+    background-color:rgb(246, 248, 248);
+    padding: 12px;
+    border-radius: 3px;
+    border: 1px solid rgb(203, 204, 204);
+}
+.icons :nth-child(1) {
+    color: #4267B2;
+}
+.icons :nth-child(2) {
+    color: #FF0000;
+}
+.icons :nth-child(3) {
+    color: #C13584;
+}
+.icons i {
+    font-size: 22px;
+    margin: 10px;
+}
+a {
+    text-decoration: none;
+    color:rgb(70, 119, 119);
+    transition: 0.3s;
+
+}
+.cartQuantity {
+    position: absolute;    
+    left: 35%;
+    top: -43%;
+    color: #efa21e;
+    font-size: 0.8rem;
+    transition: 0.3s;
+    font-weight: 700;
+}
+.linkitems:hover .cartQuantity {
+    color: rgb(0, 0, 0);
+}

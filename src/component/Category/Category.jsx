@@ -1,0 +1,76 @@
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import styles from './Category.module.css';
+
+export default function Category() {
+
+  let [CategorySlider, SetCategoryslider] = useState([]);
+
+  function getCategoryImge() {
+    axios.get(`https://ecommerce.routemisr.com/api/v1/categories`)
+    .then(({data}) => {
+      SetCategoryslider(data.data);
+    })
+    .catch(({error}) => {
+      console.log(error.message);
+    })
+  }
+
+  useEffect(() => {
+    getCategoryImge();
+  }, [])
+  
+  const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 6
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 4
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1
+  }
+};
+
+  return (
+    <div>
+      <h1 className='text-muted mt-5 fs-2 fw-bold'><i className="fa-solid fa-shop text-secondary m-3" ></i> Shope Popular Category</h1>
+      <Carousel
+        swipeable={false}
+        draggable={false}
+        showDots={false}
+        responsive={responsive}
+        ssr={true} // means to render carousel on server-side.
+        infinite={true}
+        // autoPlay={this.props.deviceType !== "mobile" ? true : false}
+        autoPlaySpeed={1000}
+        keyBoardControl={true}
+        customTransition="all .5"
+        transitionDuration={500}
+        containerClass="carousel-container"
+        removeArrowOnDeviceType={["tablet", "mobile"]}
+        // deviceType={this.props.deviceType}
+        dotListClass="custom-dot-list-style"
+        itemClass="carousel-item-padding-40-px"
+      >
+          {CategorySlider.map((img) => {
+            return <div>
+              <div className = {styles.imagContainer}><img src = {img.image} alt = {img.name} className = {styles.imgStyle} /></div>
+              <p className='text-center fw-semibold text-mute'>{img.name}</p>
+            </div>
+          })}
+      </Carousel>
+    </div>
+  )
+}
+
